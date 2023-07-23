@@ -9,9 +9,9 @@ export const ImageCard = ({ data }) => {
 			className="flex flex-col rounded border-2 border-gray-900 shadow-lg dark:border-green-200"
 		>
 			{/* -------- CARD IMAGE -------- */}
-			<div id="card-image" className=" h-48 w-full shrink-0 overflow-hidden">
+			<div id="card-image" className=" h-48 w-full  shrink-0 overflow-hidden">
 				<img
-					className="w-full object-cover"
+					className="min-h-[250px] w-full object-cover"
 					src={imgUrl}
 					alt="Project Teaser Image"
 				/>

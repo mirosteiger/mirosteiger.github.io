@@ -19,7 +19,7 @@ const Navigation = () => {
 			</div>
 			<div
 				id="navContainer"
-				className={`xs:px-1 items-center px-2 transition-all duration-300 sm:px-10
+				className={`items-center px-2 transition-all duration-300 sm:px-10
           ${
 						scrollPosition >= 50
 							? 'fixed z-10 flex justify-between rounded-xl border-2 border-red-200 bg-gray-900 bg-opacity-30 px-10 py-3 backdrop-blur-sm backdrop-filter'
@@ -55,7 +55,7 @@ const Navigation = () => {
 			{/* <NavItem id={4}>
 				</NavItem> */}
 			<DarkThemeToggle
-				className={` translate-x-20 transition-all sm:translate-x-56
+				className={` translate-x-[4rem] transition-all sm:translate-x-[10rem]
         `}
 			/>
 		</nav>

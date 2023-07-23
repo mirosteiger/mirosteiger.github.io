@@ -6,7 +6,7 @@ export const About = () => {
 	return (
 		<section
 			id="about"
-			className=" flex flex-col place-items-center items-center text-center"
+			className=" flex flex-col place-items-center items-center text-center sm:mt-14"
 		>
 			<div className="place-items-center sm:flex">
 				<div className=" mx-6 my-9 flex justify-center sm:w-1/3">

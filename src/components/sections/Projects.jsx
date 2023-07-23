@@ -4,7 +4,7 @@ import { projectData } from '../../data/projectData';
 
 export const Projects = () => {
 	return (
-		<section id="projects" className="flex flex-col items-center text-center">
+		<section id="projects" className="flex flex-col items-center text-center px-4 sm:px-32 md:px-0">
 			<div className="mb-12 flex items-center">
 				<h1 className=" mr-6">Projects</h1>
 			</div>
@@ -19,7 +19,7 @@ const CardContainer = () => {
 	return (
 		<div
 			id="projectContainer"
-			className="grid gap-4 lg:grid-cols-2 xl:grid-cols-3"
+			className="grid gap-4 md:grid-cols-2 lg:grid-cols-3 "
 		>
 			{projectData &&
 				projectData.map((data) => {
