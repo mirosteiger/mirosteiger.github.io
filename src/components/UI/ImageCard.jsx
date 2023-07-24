@@ -24,15 +24,15 @@ export const ImageCard = ({ data }) => {
 			>
 				<div className="px-6 py-4 ">
 					<div className="mb-2 text-xl font-bold">{title}</div>
-					<p className="text-justify">{description}</p>
+					<p className="text-left">{description}</p>
 				</div>
+
 				<div className="px-6 pb-2 pt-4">
 					{tags &&
 						tags.map((t, index) => {
 							return <Badge key={index}>{t}</Badge>;
 						})}
 				</div>
-
 				{/* -------- FOOTER LINKS -------- */}
 				<div className="flex justify-around px-16 pb-2 pt-4">
 					{ghLink && (
