@@ -1,13 +1,12 @@
 const ColouredImage = (props) => {
 	const { src, rounded, colour, size, border } = props;
-	console.log(src);
 	return (
 		<div
 			style={{ height: size, width: size }}
-			className={`
+			className={`border-red-200
       ${rounded ? 'rounded-full' : ''} overflow-hidden 
       ${border ? 'border-2' : 'border-0'}
-      border-${colour}`}
+      `}
 		>
 			<img
 				src={src}

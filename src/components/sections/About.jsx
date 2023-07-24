@@ -9,14 +9,8 @@ export const About = () => {
 			className=" flex flex-col place-items-center items-center text-center sm:mt-14"
 		>
 			<div className="place-items-center sm:flex">
-				<div className=" mx-6 my-9 flex justify-center sm:w-1/3">
-					<ColouredImage
-						src={pic}
-						rounded
-						border
-						colour={'red-200'}
-						size={'300px'}
-					/>
+				<div className=" mx-6 my-9 flex justify-center sm:w-1/3 ">
+					<ColouredImage src={pic} rounded border size={'300px'} />
 				</div>
 				<h3 className="text-left sm:w-2/3">
 					I'm Miro, and I appreciate you checking out my page. <br />

@@ -10,7 +10,7 @@ function App() {
 			<Spacer size="h-24" />
 			<About />
 			<Spacer size="h-36" />
-			<div className="border-2 border-green-300 py-12">
+			<div className="border-2 border-green-300 py-12 text-center">
 				<h3> --- Hier ne lustige schmale 3D-Sache rein vielleicht ---</h3>
 			</div>
 			<Spacer size="h-36" />

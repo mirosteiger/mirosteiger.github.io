@@ -10,8 +10,8 @@ const Navigation = () => {
 		<nav className="fixed flex w-full place-items-center justify-center md:justify-around">
 			<div
 				id="greets"
-				className={`-mb-48 flex items-center transition-all md:mb-0 ${
-					scrollPosition >= 30 ? ' opacity-0' : ' opacity-100 '
+				className={` -mb-48 flex items-center transition-all md:mb-0 ${
+					scrollPosition >= 70 ? ' opacity-0' : ' opacity-100 '
 				}`}
 			>
 				<span className="mr-6 animate-wiggle-hand text-5xl">👋🏼</span>
@@ -19,10 +19,10 @@ const Navigation = () => {
 			</div>
 			<div
 				id="navContainer"
-				className={`items-center px-2 transition-all duration-300 sm:px-10
+				className={`items-center px-2 transition-all duration-300 sm:px-10 
           ${
 						scrollPosition >= 50
-							? 'fixed z-10 flex justify-between rounded-xl border-2 border-red-200 bg-gray-900 bg-opacity-30 px-10 py-3 backdrop-blur-sm backdrop-filter'
+							? 'fixed  flex justify-between rounded-xl border-2 border-red-200 bg-gray-900 bg-opacity-30 px-10 py-3 backdrop-blur-sm backdrop-filter'
 							: 'fixed flex justify-between rounded-xl px-10 py-3 '
 					}
         `}
