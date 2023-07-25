@@ -1,5 +1,7 @@
+### TODOs:
+
 1. project List erweitern: 
-    -> ADV-Scripts
+    [X] ADV-Scripts
     -> Music Blog (?)
 
 2. Social links
@@ -12,6 +14,7 @@
     [X] Smartphone Darktheme toggle nicht sichbar
     [X] Einheitliche paddings für mobile
     [X] Project Cards zu schmal
+    [] Navigation mobile in Burger Menu verstecken
 
 4. Hobbies-Section
     -> Musik
