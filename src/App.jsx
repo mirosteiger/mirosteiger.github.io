@@ -15,7 +15,7 @@ function App() {
 			</div> */}
 			<Spacer id="projects" size="h-36" />
 			<Projects />
-			<Spacer id="hobbies "size="h-36" />
+			<Spacer id="hobbies"size="h-36" />
 			<Hobbies />
 		</Layout>
 	);
