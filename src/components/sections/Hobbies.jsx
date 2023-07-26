@@ -3,7 +3,6 @@ import { Spacer } from '../UI/Spacer';
 export const Hobbies = () => {
 	return (
 		<section
-			id="hobbies"
 			className="flex flex-col items-center px-12 text-center md:p-0"
 		>
 			<div className="mb-12 flex items-center">

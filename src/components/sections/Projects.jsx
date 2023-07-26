@@ -5,7 +5,6 @@ import { projectData } from '../../data/projectData';
 export const Projects = () => {
 	return (
 		<section
-			id="projects"
 			className="flex flex-col items-center px-4 text-center sm:px-32 md:px-0"
 		>
 			<div className="mb-12 flex items-center">

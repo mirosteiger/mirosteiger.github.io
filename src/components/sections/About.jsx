@@ -6,7 +6,7 @@ import { useScrollPosition } from '../../hooks/useScrollPosition';
 export const About = () => {
 	const scrollPosition = useScrollPosition();
 	return (
-		<section id="about" className="px-4 md:px-4 lg:px-32 xl:px-48">
+		<section className="px-4 md:px-4 lg:px-32 xl:px-48">
 			<div className="gap-8 pt-8 sm:flex">
 				<div
 					id="greets"
@@ -34,7 +34,9 @@ export const About = () => {
 						later point. <br />
 						<br /> I also really love 3D stuff, so i maybe put some of this
 						stuff here as well.{' '}
-						<span className="relative opacity-40 -z-10 ">(Even if it's not very good)</span>
+						<span className="relative -z-10 opacity-40 ">
+							(Even if it's not very good)
+						</span>
 					</h3>
 				</div>
 			</div>

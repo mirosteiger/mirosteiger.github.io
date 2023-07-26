@@ -5,5 +5,5 @@
  * @return {*}
  */
 export const Spacer = (props) => {
-	return <div id="spacer" className={`${props.size}`}></div>;
+	return <div id={props.id} className={`${props.size}`}></div>;
 };
