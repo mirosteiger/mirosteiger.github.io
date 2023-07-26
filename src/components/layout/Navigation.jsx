@@ -67,7 +67,7 @@ const BurgerMenu = ({
 					`}
 				>
 					<div
-						className="absolute right-0 top-0 px-8 py-8"
+						className="absolute right-0 top-0 px-5 py-5"
 						onClick={() => setIsNavOpen(false)}
 					>
 						<HiXMark className="h-8 w-8 text-gray-600" />
@@ -111,7 +111,7 @@ const DesktopMenu = ({
 				className={`items-center px-2 transition-all duration-300 sm:px-10 
           ${
 						scrollPosition >= 50
-							? 'fixed  flex justify-between rounded-xl border-2 border-green-200 bg-neutral-300 dark:bg-neutral-700 dark:bg-opacity-50 bg-opacity-30 px-10 py-3 backdrop-blur-sm backdrop-filter'
+							? 'fixed  flex justify-between rounded-xl border-2 border-green-200 bg-neutral-300 bg-opacity-30 px-10 py-3 backdrop-blur-sm backdrop-filter dark:bg-neutral-700 dark:bg-opacity-50'
 							: 'fixed flex justify-between rounded-xl px-10 py-3 '
 					}
         `}
