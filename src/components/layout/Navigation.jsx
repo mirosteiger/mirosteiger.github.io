@@ -83,6 +83,7 @@ const BurgerMenu = ({
 										activeLink={activeLink}
 										setActiveLink={setActiveLink}
 										key={s.anchor}
+										setIsNavOpen={setIsNavOpen}
 									>
 										{s.sectionName}
 									</NavItem>
