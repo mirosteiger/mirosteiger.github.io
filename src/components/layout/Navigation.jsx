@@ -1,88 +1,141 @@
 import { DarkThemeToggle } from 'flowbite-react';
 import { useScrollPosition } from '../../hooks/useScrollPosition';
 import { useState } from 'react';
+import { HiXMark } from 'react-icons/hi2';
+import { BurgerIcon } from '../UI/BurgerIcon';
+import { NavItem } from '../UI/NavItem';
 
 const Navigation = () => {
 	const scrollPosition = useScrollPosition();
 	const [activeLink, setActiveLink] = useState();
 
+	const [isNavOpen, setIsNavOpen] = useState(false);
+
+	const sections = [
+		{ sectionName: 'About', anchor: '#top' },
+		{ sectionName: 'Projects', anchor: '#projects' },
+		{ sectionName: 'Hobbies', anchor: '#hobbies' },
+	];
+
 	return (
-		<nav className="fixed flex w-full place-items-center justify-center md:justify-around">
-			<div
-				id="greets"
-				className={` -mb-48 flex items-center transition-all md:mb-0 ${
-					scrollPosition >= 70 ? ' opacity-0' : ' opacity-100 '
-				}`}
-			>
-				<span className="mr-6 animate-wiggle-hand text-5xl">👋🏼</span>
-				<h1 className=" mr-6">Gude</h1>
-			</div>
+		<>
+			<DesktopMenu
+				scrollPosition={scrollPosition}
+				sections={sections}
+				activeLink={activeLink}
+				setActiveLink={setActiveLink}
+			/>
+
+			<BurgerMenu
+				scrollPosition={scrollPosition}
+				setIsNavOpen={setIsNavOpen}
+				isNavOpen={isNavOpen}
+				sections={sections}
+				activeLink={activeLink}
+				setActiveLink={setActiveLink}
+			/>
+		</>
+	);
+};
+
+export default Navigation;
+
+const BurgerMenu = ({
+	scrollPosition,
+	setIsNavOpen,
+	isNavOpen,
+	sections,
+	activeLink,
+	setActiveLink,
+}) => {
+	return (
+		<nav
+			className={`fixed left-0 right-0 top-0 flex items-center justify-between py-5  backdrop-blur backdrop-filter transition-all sm:hidden 
+			 ${
+					scrollPosition >= 40
+						? ' border-b border-green-200 bg-neutral-200 bg-opacity-30 dark:bg-neutral-800 dark:bg-opacity-70 '
+						: ''
+				}
+`}
+		>
+			<section className="flex lg:hidden">
+				{/* BURGER ICON */}
+				<BurgerIcon setIsNavOpen={setIsNavOpen} />
+				<div
+					className={`absolute left-0 top-0 z-50 flex h-screen w-full translate-y-0 flex-col items-center justify-evenly bg-green-100 dark:bg-neutral-900
+						${isNavOpen ? 'overflow-hidden' : 'hidden'}
+					`}
+				>
+					<div
+						className="absolute right-0 top-0 px-8 py-8"
+						onClick={() => setIsNavOpen(false)}
+					>
+						<HiXMark className="h-8 w-8 text-gray-600" />
+					</div>
+					{/* Navigation Links */}
+					<ul className="flex min-h-[250px] flex-col items-center justify-between">
+						{sections &&
+							sections.map((s, index) => {
+								return (
+									<NavItem
+										id={index}
+										to={s.anchor}
+										activeLink={activeLink}
+										setActiveLink={setActiveLink}
+										key={s.anchor}
+									>
+										{s.sectionName}
+									</NavItem>
+								);
+							})}
+						<li>
+							<DarkThemeToggle />
+						</li>
+					</ul>
+				</div>
+			</section>
+		</nav>
+	);
+};
+
+const DesktopMenu = ({
+	scrollPosition,
+	sections,
+	activeLink,
+	setActiveLink,
+}) => {
+	return (
+		<nav className="fixed hidden w-full place-items-center justify-center sm:flex md:justify-around">
 			<div
 				id="navContainer"
 				className={`items-center px-2 transition-all duration-300 sm:px-10 
           ${
 						scrollPosition >= 50
-							? 'fixed  flex justify-between rounded-xl border-2 border-red-200 bg-gray-900 bg-opacity-30 px-10 py-3 backdrop-blur-sm backdrop-filter'
+							? 'fixed  flex justify-between rounded-xl border-2 border-green-200 bg-neutral-300 dark:bg-neutral-700 dark:bg-opacity-50 bg-opacity-30 px-10 py-3 backdrop-blur-sm backdrop-filter'
 							: 'fixed flex justify-between rounded-xl px-10 py-3 '
 					}
         `}
 			>
-				<NavItem
-					id={1}
-					to="#top"
-					activeLink={activeLink}
-					setActiveLink={setActiveLink}
-				>
-					About
-				</NavItem>
-				<NavItem
-					id={2}
-					to="#projects"
-					activeLink={activeLink}
-					setActiveLink={setActiveLink}
-				>
-					Projects
-				</NavItem>
-				<NavItem
-					id={3}
-					to="#hobbies"
-					activeLink={activeLink}
-					setActiveLink={setActiveLink}
-				>
-					Hobbies
-				</NavItem>
+				{sections &&
+					sections.map((s, index) => {
+						return (
+							<NavItem
+								id={index}
+								to={s.anchor}
+								activeLink={activeLink}
+								setActiveLink={setActiveLink}
+								key={s.anchor}
+							>
+								{s.sectionName}
+							</NavItem>
+						);
+					})}
 			</div>
-			{/* <NavItem id={4}>
-				</NavItem> */}
+
 			<DarkThemeToggle
-				className={` translate-x-[4rem] transition-all sm:translate-x-[10rem]
+				className={` -translate-x-[9.7rem] transition-all sm:translate-x-[10rem]
         `}
 			/>
 		</nav>
 	);
 };
-
-const NavItem = ({ children, id, to, activeLink, setActiveLink }) => {
-	return (
-		<div
-			id={`item-slot-${id}`}
-			className="active:border-1 mx-4 w-auto cursor-pointer active:border-red-400 "
-			onClick={() => setActiveLink(id)}
-		>
-			<a
-				href={to}
-				className="text-center text-white no-underline hover:text-white "
-			>
-				<p
-					style={{ textShadow: '2px 2px 2px black' }}
-					className={`before:font-bold hover:scale-105 hover:font-bold ${
-						activeLink === id ? 'scale-105 font-bold underline' : ''
-					}`}
-				>
-					{children}
-				</p>
-			</a>
-		</div>
-	);
-};
-export default Navigation;
