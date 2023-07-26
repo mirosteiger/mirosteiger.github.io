@@ -9,7 +9,7 @@ export const Hobbies = () => {
 			<div className="mb-12 flex items-center">
 				<h1 className=" mr-6">Hobbies</h1>
 			</div>
-			<p>I got some hobbies too, 4 real</p>
+			<p>I got some hobbies too, i swear</p>
 			<Spacer size="mb-16" />
 		</section>
 	);

@@ -1,29 +1,42 @@
 /* eslint-disable react/no-unescaped-entities */
 import pic from '../../assets/images/miro_transparent.png';
 import ColouredImage from '../UI/ColouredImage';
+import { useScrollPosition } from '../../hooks/useScrollPosition';
 
 export const About = () => {
+	const scrollPosition = useScrollPosition();
 	return (
-		<section
-			id="about"
-			className=" flex flex-col place-items-center items-center text-center sm:mt-14"
-		>
-			<div className="place-items-center sm:flex">
+		<section id="about" className="px-4 md:px-4 lg:px-32 xl:px-48">
+			<div className="gap-8 pt-8 sm:flex">
+				<div
+					id="greets"
+					className={`fixed left-1/2 top-32 col-span-2 flex -translate-x-1/2  items-center sm:top-24 transition-all${
+						scrollPosition >= 70 ? ' opacity-0' : ' opacity-100 '
+					}`}
+				>
+					<span className="mr-6 animate-wiggle-hand text-5xl">👋🏼</span>
+					<h1 className=" mr-6">Gude</h1>
+				</div>
+
 				<div className=" mx-6 my-9 flex justify-center sm:w-1/3 ">
 					<ColouredImage src={pic} rounded border size={'300px'} />
 				</div>
-				<h3 className="text-left sm:w-2/3">
-					I'm Miro, and I appreciate you checking out my page. <br />
-					<br />
-					This website is all about my passion for coding projects, music, and
-					computer graphics. As an avid coder, I love building innovative
-					projects and exploring the endless possibilities of technology. You'll
-					find my latest coding endeavors showcased here, from fun little
-					experiments to useful tools. <br />
-					<br /> When I'm not immersed in lines of code, I'm lost in the
-					enchanting world of music. I'll share my musical journey, favorite
-					tunes, and perhaps even some original compositions.
-				</h3>
+				<div className="pt-12">
+					<h3 className=" text-left ">
+						I'm Miro, and I appreciate you checking out my page. <br />
+						<br />
+						This website serves as a collection of my previous projects and as a
+						little archive for my other stuff. You'll find my latest projects
+						below, from fun little experiments and pages to useful tools. <br />
+						<br /> When I'm not chilling in my browser, I'm lost in the
+						enchanting world of music. I'll maybe share my musical inspirations,
+						favorite tunes, and perhaps even some original compositions at a
+						later point. <br />
+						<br /> I also really love 3D stuff, so i maybe put some of this
+						stuff here as well.{' '}
+						<span className="relative opacity-40 -z-10 ">(Even if it's not very good)</span>
+					</h3>
+				</div>
 			</div>
 		</section>
 	);

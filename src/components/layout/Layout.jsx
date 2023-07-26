@@ -7,7 +7,7 @@ const Layout = ({ children }) => {
 				<Navigation />
 			</header>
 
-			<main className="place-items-center py-24 md:p-32">{children}</main>
+			<main className="place-items-center px-4 py-28 md:px-8">{children}</main>
 		</div>
 	);
 };
