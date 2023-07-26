@@ -10,7 +10,7 @@ export const About = () => {
 			<div className="gap-8 pt-8 sm:flex">
 				<div
 					id="greets"
-					className={`fixed left-1/2 top-32 col-span-2 flex -translate-x-1/2  items-center sm:top-24 transition-all${
+					className={`fixed left-1/2 top-24 col-span-2 flex -translate-x-1/2 items-center  sm:top-32 transition-all${
 						scrollPosition >= 70 ? ' opacity-0' : ' opacity-100 '
 					}`}
 				>
