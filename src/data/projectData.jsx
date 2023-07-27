@@ -41,7 +41,7 @@ export const projectData = [
 		description:
 			'A set of terminal based python tools to update, create and automate actions in the Google AdManager via its Pyhton API. It minimizes manual effort in updating thousands of line items for various time consuming tasks.',
 		ghLink: 'https://github.com/mirosteiger/Google-AdManager-Python-Tools',
-		tags: ['python', 'Google API',  ],
+		tags: ['python', 'Google API', 'automation' ],
 	},
 	{
 		title: 'Knoop.it',
