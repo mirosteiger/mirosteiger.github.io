@@ -11,7 +11,7 @@ export const projectData = [
 		title: 'Psychonauts',
 		imgUrl: psychonauts,
 		description:
-			'This is a landingpage for a ficitional music festival i would enjoy. It has implemented a user login, a database, state management as well as a shopping cart functionality.',
+			'This is a landingpage for a ficitional music festival i would enjoy. It has implemented a user login, a database, state management as well as a shopping cart functionality (which is currently a WIP).',
 		ghLink: 'https://github.com/mirosteiger/festival-landingpage',
 		liveLink: 'https://mirosteiger.github.io/festival-landingpage/',
 		tags: ['typescript', 'react', 'firebase', 'zustand'],
@@ -20,7 +20,7 @@ export const projectData = [
 		title: 'Online Step Sequencer',
 		imgUrl: step,
 		description:
-			'I tried to utilize the web audio api using the ToneJs Framework to build a simple step sequencer. Still a little buggy at the moment. May fix this in the future.',
+			'I tried to utilize the web audio api using the ToneJs Framework to build a simple step sequencer. ⇧ + Click on a tile to add triplets. (Bug: You have to initially click on a sample to hear something. Going to fix ths later) 🫡. ',
 		ghLink: 'https://github.com/mirosteiger/react-stepsequencer',
 		liveLink: 'https://mirosteiger.github.io/react-stepsequencer/',	
 		tags: ['javascript', 'react', 'audio'],
