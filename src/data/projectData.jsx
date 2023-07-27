@@ -14,7 +14,7 @@ export const projectData = [
 			'This is a landingpage for a ficitional music festival i would enjoy. It has implemented a user login, a database, state management as well as a shopping cart functionality (which is currently a WIP).',
 		ghLink: 'https://github.com/mirosteiger/festival-landingpage',
 		liveLink: 'https://mirosteiger.github.io/festival-landingpage/',
-		tags: ['typescript', 'react', 'firebase', 'zustand'],
+		tags: ['typescript', 'react', 'firebase', 'zustand', 'styled-components'],
 	},
 	{
 		title: 'Online Step Sequencer',
@@ -45,7 +45,7 @@ export const projectData = [
 	},
 	{
 		title: 'Knoop.it',
-		imgUrl: knoop2,
+		imgUrl: knoop1,
 		description:
 			'Knoop.it (Dutch for "knot it") was a student project. We built a web app for generating 3D-Materials by creating Shaders with a Node-Editor. The editing was based on a realtime database to allow online collaboration.',
 		ghLink: 'https://github.com/samimaa/Knoopit',
