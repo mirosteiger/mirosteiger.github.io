@@ -1,4 +1,6 @@
 import { FaGithub, FaLinkedin, FaSpotify, FaSquareXing } from 'react-icons/fa6';
+import { HiMail } from 'react-icons/hi';
+import { GrMail } from 'react-icons/gr';
 
 export const SocialLinks = ({ nav }) => {
 	return (
@@ -26,6 +28,9 @@ export const SocialLinks = ({ nav }) => {
 				target="_blank"
 			>
 				<FaSpotify size={35} />
+			</a>
+			<a href="mailto:miro.steiger@outlook.de" target="_blank">
+				<HiMail size={38} />
 			</a>
 		</div>
 	);
