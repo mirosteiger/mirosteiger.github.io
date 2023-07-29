@@ -5,18 +5,18 @@
     - [ ] Music Blog (?)
 
 2. Social links
-    - [ ] Github
-    - [ ] LinkedIn
-    - [ ] Xing
-    - [ ] Spotify
+    - [x] Github
+    - [x] LinkedIn
+    - [x] Xing
+    - [x] Spotify
 
 3. Responsiveness
     - [x] Smartphone Darktheme toggle nicht sichbar
     - [x] Einheitliche paddings für mobile
     - [x] Project Cards zu schmal
-    - [ ] Navigation mobile in Burger Menu verstecken
+    - [x] Navigation mobile in Burger Menu verstecken
 
 4. Hobbies-Section
     - [ ] Musik
     - [ ] Spotify-Liste
-    - [ ] Renderingss
+    - [x] Media Gallery for Renderings
