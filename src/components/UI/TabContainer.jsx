@@ -16,7 +16,7 @@ export const TabContainer = ({
 						// map through all entries to get tab names
 						return (
 							<li
-								className={`mr-2
+								className={`mr-2 cursor-pointer
                             ${item.title === currentTab ? 'active' : ''}`}
 								key={index}
 								onClick={() => {setCurrentTab(item.title)}}
