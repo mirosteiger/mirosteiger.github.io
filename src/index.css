@@ -60,3 +60,8 @@ button:focus-visible {
 		background-color: #f9f9f9;
 	}
 }
+
+/* css debug lol */
+div {
+	border: 1px dashed red;
+}

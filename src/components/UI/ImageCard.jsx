@@ -6,7 +6,7 @@ export const ImageCard = ({ data }) => {
 	return (
 		<div
 			id="cardContainer"
-			className="flex flex-col rounded border-2 border-gray-900 shadow-lg dark:border-green-200"
+			className="flex flex-col rounded border-2 border-gray-900 shadow-lg dark:border-green-200 "
 		>
 			{/* -------- CARD IMAGE -------- */}
 			<div id="card-image" className=" h-48 w-full  shrink-0 overflow-hidden">
@@ -39,7 +39,7 @@ export const ImageCard = ({ data }) => {
 						<a
 							href={ghLink}
 							target="_blank"
-							className="flex flex-col items-center justify-center"
+							className="flex flex-col items-center justify-center "
 						>
 							<FaGithub size={35} />
 							<p>Github</p>
