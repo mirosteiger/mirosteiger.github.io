@@ -19,4 +19,6 @@
 4. Hobbies-Section
     - [ ] Musik
     - [ ] Spotify-Liste
-    - [x] Media Gallery for Renderings
+    - [x] MediaSlider for Renderings
+    - [x] Slider: Fullscreen Lightbox
+        - [ ] Bug: Arrowkeys not working: index doesn't change
