@@ -23,7 +23,7 @@ export const TabContainer = ({
 							>
 								<p
 									className={`inline-block cursor-pointer rounded-t-lg p-4 hover:bg-neutral-200/30 active:bg-neutral-200/20
-                                ${item.title === currentTab ? 'active' : ''}`}
+                                ${item.title === currentTab ? ' font-bold bg-neutral-200/30' : ''}`}
 								>
 									{item.title}
 								</p>
