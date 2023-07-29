@@ -4,6 +4,8 @@ import { useState } from 'react';
 import { HiXMark } from 'react-icons/hi2';
 import { BurgerIcon } from '../UI/BurgerIcon';
 import { NavItem } from '../UI/NavItem';
+import { FaGithub, FaLinkedin } from 'react-icons/fa6';
+import { SocialLinks } from '../UI/SocialLinks';
 
 const Navigation = () => {
 	const scrollPosition = useScrollPosition();
@@ -50,7 +52,7 @@ const BurgerMenu = ({
 }) => {
 	return (
 		<nav
-			className={`fixed left-0 right-0 top-0 flex items-center justify-between py-5  backdrop-blur backdrop-filter transition-all sm:hidden 
+			className={`fixed left-0 right-0 top-0 z-50 flex items-center justify-between py-5 backdrop-blur backdrop-filter transition-all sm:hidden 
 			 ${
 					scrollPosition >= 40
 						? ' border-b border-green-200 bg-neutral-200 bg-opacity-30 dark:bg-neutral-800 dark:bg-opacity-70 '
@@ -92,6 +94,7 @@ const BurgerMenu = ({
 						<li>
 							<DarkThemeToggle />
 						</li>
+						<SocialLinks nav />
 					</ul>
 				</div>
 			</section>
@@ -106,7 +109,7 @@ const DesktopMenu = ({
 	setActiveLink,
 }) => {
 	return (
-		<nav className="fixed hidden w-full place-items-center justify-center sm:flex md:justify-around">
+		<nav className="fixed z-50 hidden w-full place-items-center justify-center sm:flex md:justify-around">
 			<div
 				id="navContainer"
 				className={`items-center px-2 transition-all duration-300 sm:px-10 
