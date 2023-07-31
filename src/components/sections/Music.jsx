@@ -14,20 +14,22 @@ export const Music = () => {
 	return (
 		<>
 			<h1 className="mb-8">Music</h1>
-			<TabContainer
-				music
-				data={playlists}
-				currentTab={currentTab}
-				setCurrentTab={setCurrentTab}
-			>
-				<iframe
-					className="min-h-[666px] rounded-2xl border-2 border-neutral-800 dark:border-green-200 box-border"
-					src={`https://open.spotify.com/embed/playlist/${data.id}?utm_source=generator&theme=0`}
-					width="100%"
-					allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-					loading="lazy"
-				></iframe>
-			</TabContainer>
+			<div className="media-container sm:w-3/4">
+				<TabContainer
+					music
+					data={playlists}
+					currentTab={currentTab}
+					setCurrentTab={setCurrentTab}
+				>
+					<iframe
+						className="min-h-[666px] rounded-2xl border-2 border-neutral-800 dark:border-green-200 box-border"
+						src={`https://open.spotify.com/embed/playlist/${data.id}?utm_source=generator&theme=0`}
+						width="100%"
+						allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+						loading="lazy"
+					></iframe>
+				</TabContainer>
+			</div>
 		</>
 	);
 };
