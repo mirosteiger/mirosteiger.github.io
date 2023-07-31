@@ -17,8 +17,8 @@
     - [x] Navigation mobile in Burger Menu verstecken
 
 4. Hobbies-Section
-    - [ ] Musik
-    - [ ] Spotify-Liste
+    - [x] Musik
+    - [x] Spotify-Liste
     - [x] MediaSlider for Renderings
     - [x] Slider: Fullscreen Lightbox
         - [ ] Bug: Arrowkeys not working: index doesn't change
