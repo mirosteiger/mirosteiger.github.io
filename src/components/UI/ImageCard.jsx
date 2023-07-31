@@ -1,8 +1,9 @@
 import { Badge } from './Badge';
 import { FaGithub, FaDisplay } from 'react-icons/fa6';
+import { IoEyeSharp } from 'react-icons/io5';
 
 export const ImageCard = ({ data }) => {
-	const { title, imgUrl, description, ghLink, liveLink, tags } = data;
+	const { title, imgUrl, description, ghLink, readLink, liveLink, tags } = data;
 	return (
 		<div
 			id="cardContainer"
@@ -43,6 +44,16 @@ export const ImageCard = ({ data }) => {
 						>
 							<FaGithub size={35} />
 							<p>Github</p>
+						</a>
+					)}
+					{readLink && (
+						<a
+							href={readLink}
+							target="_blank"
+							className="flex flex-col items-center justify-center "
+						>
+							<IoEyeSharp size={35} />
+							<p>Read</p>
 						</a>
 					)}
 					{liveLink && (
