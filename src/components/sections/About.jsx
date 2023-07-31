@@ -9,12 +9,15 @@ export const About = () => {
 	return (
 		<section className="px-4 md:px-4 lg:px-32 xl:px-48">
 			<div className="gap-8 pt-8 sm:flex ">
-				{/* Waving Hand */}
+				{/* 
+				Waving Hand - hidden to not block media tabs in hobbies-section
+				*/}
 				<div
 					id="greets"
-					className={`fixed left-1/2 top-24 col-span-2 flex -translate-x-1/2 items-center  sm:top-32 transition-all${
-						scrollPosition >= 70 ? ' opacity-0' : ' opacity-100 '
-					}`}
+					className={`fixed left-1/2 top-24 col-span-2  -translate-x-1/2 items-center  transition-all sm:top-32
+					${scrollPosition >= 60 ? ' opacity-0 ' : ' opacity-100 '}
+					${scrollPosition >= 80 ? ' hidden ' : ' flex'} 
+					`}
 				>
 					<span className="mr-6 animate-wiggle-hand text-5xl">👋🏼</span>
 					<h1 className=" mr-6">Gude</h1>
