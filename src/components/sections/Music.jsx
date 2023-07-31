@@ -10,6 +10,7 @@ export const Music = () => {
 		.map((i) => {
 			data = i;
 		});
+
 	return (
 		<>
 			<h1 className="mb-8">Music</h1>
@@ -18,10 +19,9 @@ export const Music = () => {
 				data={playlists}
 				currentTab={currentTab}
 				setCurrentTab={setCurrentTab}
-				src={`https://open.spotify.com/embed/playlist/${data.id}?utm_source=generator&theme=4`}
 			>
 				<iframe
-					style={{ borderRadius: '12px', minHeight: '666px' }}
+					className="min-h-[666px] rounded-2xl border-2 border-neutral-800 dark:border-green-200 box-border"
 					src={`https://open.spotify.com/embed/playlist/${data.id}?utm_source=generator&theme=0`}
 					width="100%"
 					allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"

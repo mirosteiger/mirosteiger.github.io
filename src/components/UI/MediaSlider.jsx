@@ -38,16 +38,12 @@ export const MediaSlider = ({ data }) => {
 	useEffect(() => {
 		const handleArrowNav = (event) => {
 			if (event.key === 'ArrowLeft') {
-				console.log('Left');
 				prevSlide();
 			} else if (event.key === 'ArrowRight') {
-				console.log('Right');
 				nextSlide();
 			} else if (event.key === 'Escape') {
-				console.log('Esc');
 				toggleLightbox();
 			}
-			console.log(currentIndex);
 		};
 		window.addEventListener('keydown', handleArrowNav);
 
@@ -66,7 +62,7 @@ export const MediaSlider = ({ data }) => {
 				prevSlide={prevSlide}
 				nextSlide={nextSlide}
 			/>
-			<div className="group relative z-0 m-auto h-[450px] w-full max-w-[1400px]  py-4 sm:h-[600px]">
+			<div className="group relative z-0 m-auto h-[450px] w-full max-w-[1400px] sm:h-[600px]">
 				{data && data.type === 'video' ? (
 					<div className=" rounded-2xl object-cover px-4">
 						<video src={data.imgs} controls />
@@ -122,7 +118,7 @@ const Lightbox = ({
 			bg-neutral-700/95 ${open ? 'block' : 'hidden'}
 			`}
 		>
-			<div className="flex place-items-center justify-center m-auto w-[80%] max-h-[90vh] ">
+			<div className="m-auto flex max-h-[90vh] w-[80%] place-items-center justify-center ">
 				{type === 'video' ? (
 					<video controls src={src} />
 				) : (

@@ -1,5 +1,3 @@
-import { useEffect, useState } from 'react';
-
 export const TabContainer = ({
 	music,
 	data,
@@ -8,8 +6,8 @@ export const TabContainer = ({
 	setCurrentTab,
 }) => {
 	return (
-		<div className="sm:px-4 w-full">
-			<ul className="flex flex-wrap border-b border-gray-200 text-center text-sm font-medium text-gray-500 dark:border-gray-700 dark:text-gray-400">
+		<div className="w-full sm:px-4">
+			<ul className="flex flex-wrap  text-center text-sm font-medium text-gray-500  dark:text-gray-400">
 				{!music &&
 					data &&
 					data.map((item, index) => {
@@ -23,8 +21,8 @@ export const TabContainer = ({
 									setCurrentTab(item.title);
 								}}
 							>
-								<p
-									className={`inline-block cursor-pointer rounded-t-lg p-4 hover:bg-neutral-200/30 active:bg-neutral-200/20
+								<span
+									className={`inline-block rounded-t-lg p-4 hover:bg-neutral-200/30 active:bg-neutral-200/20
                                 ${
 																	item.title === currentTab
 																		? ' bg-neutral-200/30 font-bold'
@@ -32,7 +30,7 @@ export const TabContainer = ({
 																}`}
 								>
 									{item.title}
-								</p>
+								</span>
 							</li>
 						);
 					})}
@@ -52,7 +50,7 @@ export const TabContainer = ({
 								<p
 									className={`inline-block cursor-pointer rounded-t-lg p-4 hover:bg-neutral-200/30 active:bg-neutral-200/20
                                 ${
-																	item === currentTab
+																	item.title === currentTab
 																		? ' bg-neutral-200/30 font-bold'
 																		: ''
 																}`}
