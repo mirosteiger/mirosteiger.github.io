@@ -7,7 +7,7 @@ export const SocialLinks = ({ nav }) => {
 		<div
 			className={`mr-4 mt-6  justify-around ${
 				nav
-					? 'absolute bottom-16 flex w-1/2 sm:hidden'
+					? 'absolute bottom-24 flex w-1/2 sm:hidden'
 					: 'hidden w-full justify-around border-t-2 border-red-200 px-8 py-6 dark:border-green-200 sm:flex'
 			}`}
 		>
